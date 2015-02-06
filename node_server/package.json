@@ -12,12 +12,14 @@
     "forever": "~0.10.8",
     "glob": "~3.2.1",
     "graceful-fs": "~2.0.0",
+    "moment": "~2.9.0",
+    "mysql": "^2.5.4",
     "node": "0.0.0",
     "node-config": "0.0.2",
+    "numeral": "~1.5.3",
     "request": "~2.40.0",
-    "underscore": "~1.4.4",
-    "moment": "~2.9.0",
-    "numeral": "~1.5.3"
+    "sequelize": "^2.0.0-rc8",
+    "underscore": "~1.4.4"
   },
   "devDependencies": {},
   "scripts": {
