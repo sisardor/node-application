@@ -1,23 +1,50 @@
 <!-- index.html -->
 <html>
-  <head>
-    <title>Hello React</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+<head>
+	<title>Hello React</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="http://fb.me/react-0.12.2.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+</head>
+<body>
 
-    <script src="http://fb.me/react-0.12.2.js"></script>
-    <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
-  </head>
-  <body>
+<!-- <header class="head_banner">
+</header> -->
 
-    <header class="head_banner">
-        
-    </header>
-    <div id="content"></div>
+<div class="toolbar main-bar user-view">
+	<span class="toolbar-section">
+		<div class="view-toggle clearfix">
+
+			<div class="new-button new-default-button list-button">
+				<span class="left-button-icon">
+					<!-- <span data-icon="list" class="list glyph  prod"></span> -->
+					<span data-icon="list" class="glyph fa fa-list "></span>
+					
+				</span>
+				<span class="new-button-text">List</span>
+				<span class="right-button-icon"></span>
+
+			</div>
+
+			<div class="new-button new-default-button calendar-button">
+				<span class="left-button-icon">
+					<!-- <span data-icon="calendar" class="calendar glyph  prod"></span> -->
+					<span data-icon="calendar" class="glyph fa fa-calendar "></span>
+				</span>
+				<span class="new-button-text">Calendar</span>
+				<span class="right-button-icon"></span>
+			</div>
+		</div>
+	</span>
+</div>
+
+<div id="content"></div>
 
 
-    <script src="build/tutorial1.js"></script>
+<script src="build/tutorial1.js"></script>
 
-  </body>
+</body>
 </html>
