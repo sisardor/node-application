@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="fragment" content="!">
         <title>React _ Backbone • TodoMVC</title>
         <link rel="stylesheet" href="node_modules/todomvc-common/base.css">
         <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
@@ -10,8 +11,11 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+
         <div id="toolbar"></div>
+
         <section id="todoapp"></section>
+        <section id="GroceryList"></section>
         <footer id="info">
             <p>Double-click to edit a todo</p>
             <p>Created by <a href="http://github.com/petehunt/">petehunt</a></p>
@@ -25,15 +29,33 @@
         <script src="node_modules/underscore/underscore.js"></script>
         <script src="node_modules/backbone/backbone.js"></script>
         <script src="node_modules/backbone.localstorage/backbone.localStorage.js"></script>
-
+<!-- 
+        <script type="text/jsx" src="js/test.jsx"></script>
+ -->
         <script src="js/todo.js"></script>
         <script src="js/todos.js"></script>
-        <!-- jsx is an optional syntactic sugar that transforms methods in React's
-        `render` into an HTML-looking format. Since the two models above are
-        unrelated to React, we didn't need those transforms. -->
+        <script type="text/jsx" src="js/toolbar/toolbar.jsx"></script>
         <script type="text/jsx" src="js/todoItem.jsx"></script>
         <script type="text/jsx" src="js/footer.jsx"></script>
         <script type="text/jsx" src="js/app.jsx"></script>
-        <script type="text/jsx" src="js/toolbar/toolbar.jsx"></script>
+        
+        <script type="text/javascript"> 
+        $(document).on("click", "a[href^='/']", function(event) {
+          var href, passThrough, url;
+          href = $(event.currentTarget).attr('href');
+          passThrough = href.indexOf('sign_out') >= 0;
+          if (!passThrough && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+            event.preventDefault();
+            url = href.replace(/^\//, '').replace('\#\!\/', '');
+            var App = new Backbone.Router();
+            App.navigate(url, {
+              trigger: true
+            });
+            return false;
+          }
+        });
+        </script>
+
+        <span class="dropdown-style-default" id="dropdown-area"></div>
     </body>
 </html>

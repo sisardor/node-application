@@ -7,6 +7,10 @@
 /*jshint newcap:false */
 /*global React, Backbone */
 var app = app || {};
+var buttons = [
+  {title: "List", iconCLass: "fa-list", iconClassShort: "list", url:"/list"},
+  {title: "Calendar", iconCLass: "fa-calendar", iconClassShort: "calendar", url:"/calendar"}
+];
 
 (function () {
     'use strict';
@@ -14,8 +18,12 @@ var app = app || {};
     app.ALL_TODOS = 'all';
     app.ACTIVE_TODOS = 'active';
     app.COMPLETED_TODOS = 'completed';
+    app.LIST_PAGE = 'list';
+    app.CALENDAR_PAGE = 'calendar';
     var TodoFooter = app.TodoFooter;
     var TodoItem = app.TodoItem;
+    var ToolBar = app.ToolBar;
+    var ToolBarDropDown = app.ToolBarDropDown;
 
     var ENTER_KEY = 13;
 
@@ -63,16 +71,45 @@ var app = app || {};
                 routes: {
                     '': 'all',
                     'active': 'active',
-                    'completed': 'completed'
+                    'completed': 'completed',
+                    'list': 'list',
+                    'calendar': 'calendar'
                 },
                 all: this.setState.bind(this, {nowShowing: app.ALL_TODOS}),
                 active: this.setState.bind(this, {nowShowing: app.ACTIVE_TODOS}),
-                completed: this.setState.bind(this, {nowShowing: app.COMPLETED_TODOS})
+                completed: this.setState.bind(this, {nowShowing: app.COMPLETED_TODOS}),
+                list: this.setState.bind(this, {nowShowing: app.LIST_PAGE}),
+                calendar: this.setState.bind(this, {nowShowing: app.CALENDAR_PAGE}),
+                current:function(route) {
+                    var Router = this,
+                        fragment = Backbone.history.fragment,
+                        routes = _.pairs(Router.routes),
+                        route = null, params = null, matched;
+
+                    matched = _.find(routes, function(handler) {
+                        route = _.isRegExp(handler[0]) ? handler[0] : Router._routeToRegExp(handler[0]);
+                        return route.test(fragment);
+                    });
+
+                    if(matched) {
+                        // NEW: Extracts the params using the internal
+                        // function _extractParameters 
+                        params = Router._extractParameters(route, fragment);
+                        route = matched[1];
+                    }
+
+                    return {
+                        route : route,
+                        fragment : fragment,
+                        params : params
+                    };
+                }
             });
 
-            new Router();
-            Backbone.history.start();
 
+            new Router();
+            Backbone.history.start({pushState: true, root: "/"})
+            
             this.props.todos.fetch();
         },
 
@@ -216,4 +253,32 @@ var app = app || {};
         <TodoApp todos={app.todos} />,
         document.getElementById('todoapp')
     );
+
+    React.render(
+        //React.createElement(ToolBar, null),
+        <ToolBar data={buttons} />,
+        document.getElementById('toolbar')
+    );
+
+var GroceryList = React.createClass({
+  handleClick: function(i) {
+    console.log('You clicked: ' + this.props.items[i]);
+  },
+
+  render: function() {
+    return (
+      <div>
+        {this.props.items.map(function(item, i) {
+          return (
+            <div onClick={this.handleClick.bind(this, i)} key={i}>{item}</div>
+          );
+        }, this)}
+      </div>
+    );
+  }
+});
+
+React.render(
+  <GroceryList items={['Apple', 'Banana', 'Cranberry']} />,  document.getElementById('GroceryList')
+);
 })();
