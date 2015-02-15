@@ -9,7 +9,8 @@
 var app = app || {};
 var buttons = [
   {title: "List", iconCLass: "fa-list", iconClassShort: "list", url:"/list"},
-  {title: "Calendar", iconCLass: "fa-calendar", iconClassShort: "calendar", url:"/calendar"}
+  {title: "Calendar", iconCLass: "fa-calendar", iconClassShort: "calendar", url:"/calendar"},
+  //{title: "Menu", dropDown:true, iconCLass: "fa-chevron-down"}
 ];
 
 (function () {
