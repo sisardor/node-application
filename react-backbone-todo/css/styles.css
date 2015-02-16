@@ -151,7 +151,11 @@
 }
 
 
-.dropdown .dropdown-menu a.menu-item:hover, .dropdown .dropdown-menu a.menu-item.hovered, .dropdown .dropdown-menu .item:hover, .dropdown .dropdown-menu .item.hovered {
+.dropdown .dropdown-menu a.menu-item:hover, 
+.dropdown .dropdown-menu a.menu-item.hovered, 
+.dropdown .dropdown-menu .item:hover, 
+.item:hover,
+.dropdown .dropdown-menu .item.hovered {
     cursor: pointer;
     background-color: #1f8dd6;
     color: white;
@@ -181,7 +185,9 @@
 
 
 
-
+.dropdown-style-default > div {
+    background: antiquewhite
+}
 
 
 
