@@ -1,0 +1,40 @@
+#myApp {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    min-height: 100%;
+
+}
+
+.tWidget {
+    margin: 0 0 30px;
+
+    background: aliceblue;
+    border: 1px solid #ccc;
+    position: relative;
+    min-height: 100%;
+}
+.tWidget .header {
+    height: 10px;
+    background: antiquewhite;
+    padding: 5px;
+}
+
+.tWidget .body {
+    background: aqua;
+    padding: 5px;
+    overflow: auto;
+}
+.tWidget .body:after {
+  content: "";
+  display: block;
+}
+.tWidget .footer {
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+}
+
