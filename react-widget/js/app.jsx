@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-
+var converter = new Showdown.converter();
 var Tweet = React.createClass({
     render: function(){
         var userName = this.props.tweet.userName,
@@ -9,13 +9,13 @@ var Tweet = React.createClass({
             tweetDate = this.props.tweet.tweetDate,
             tweet = this.props.tweet.tweet,
             avatar = this.props.tweet.avatar
-
+        var rawMarkup = converter.makeHtml(tweet);
         return(
-            <div className="wTweet">
-                <div className="tw-header">{userName}<img class="u-photo avatar" alt="" src={avatar} /></div>
-                <div className="tw-body">{tweet}</div>
+            <li className="wTweet positionRel customisable-border ">
+                <div className="tw-header">{userName}<img className="u-photo avatar" alt="" src={avatar} /></div>
+                <div className="tw-body"><p dangerouslySetInnerHTML={{__html: rawMarkup}}></p></div>
                 <div className="tw-footer">{displayName}</div>
-            </div>);
+            </li>);
     }
 });
 var WidgetBody = React.createClass({
@@ -27,19 +27,15 @@ var WidgetBody = React.createClass({
             height: this.props.height
         };
 
-        var rows = [];
-        for (var i = 0; i < 50; i++) {
-            rows.push(<tr><th class="tg-031e">Do not generate CSS jfksjdfkjsdkfj kdjsfk jsdfkjsd</th></tr>);
-        };
         return (
         <div style={style} className="body">
-            <table class="tg">
+            <ul className="">
                 {
                     this.props.tweets.map(function(tweet, index){
-                        return <tr><th class="tg-031e"><Tweet tweet={tweet} key={tweet.id}/></th></tr>;
+                        return <Tweet tweet={tweet} key={tweet.id}/>;
                     })
                 }   
-            </table>
+            </ul>
         </div>
         );
     }
@@ -58,8 +54,8 @@ var TwitterWidget = React.createClass({
     },
     render: function(){
         return(
-            <div ref="wWidget" className="tWidget">
-                <div ref="wHeader" className="header"></div>
+            <div ref="wWidget" className="tWidget positionRel customisable-border">
+                <div ref="wHeader" className="header customisable-border">Twitter</div>
                 <WidgetBody height={this.state.bodyHeight} tweets={this.props.tweets}/>
                 <div ref="wFooter" className="footer"></div>
             </div>);

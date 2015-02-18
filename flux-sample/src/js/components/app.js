@@ -13,7 +13,7 @@ var APP =
                 <h1>Shop</h1>
                 <Catalog />
 
-                <h1>Cart</h1>
+                <h1>My Cart</h1>
                 <Cart />
               </div>
     }

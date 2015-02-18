@@ -1,36 +1,35 @@
 #myApp {
-    position: relative;
     width: 400px;
     height: 300px;
     min-height: 100%;
 
 }
-
+.customisable-border {
+  border: 2px solid #e8e8e8;
+}
+.positionRel {
+    position: relative;
+}
 .tWidget {
     margin: 0 0 30px;
-
-    background: aliceblue;
-    border: 1px solid #ccc;
-    position: relative;
+    border-radius: 5px;
+    background: #fff;
     min-height: 100%;
 }
 .tWidget .header {
-    height: 10px;
-    background: antiquewhite;
     padding: 5px;
+    border-width: 0px 0px 1px;
 }
 
 .tWidget .body {
-    background: aqua;
-    padding: 5px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .tWidget .body:after {
   content: "";
   display: block;
 }
 .tWidget .footer {
-    background: orange;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -38,3 +37,24 @@
     width: 100%;
 }
 
+.tWidget ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.wTweet {
+  padding: 10px 10px 10px 69px;
+  border-width: 0px 0px 1px;
+}
+.tw-header .avatar {
+  position: absolute;
+  /*top: 0;*/
+  left: 9px;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 4px;
+}
