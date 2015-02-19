@@ -58,3 +58,85 @@
   background: #fff;
   border-radius: 4px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====  masonry tile layout ===== */
+
+.main-section {
+    width: 1023px;
+    height: 300px;
+    background: aliceblue;
+    margin: 0 auto;
+}
+.main-section-column {
+    width: 341px;
+    background: antiquewhite;
+    float: left;
+    display: block;
+}
+
+.main-section-column.left {
+
+}
+.main-section-column.center {
+
+}
+.main-section-column.right {
+
+}
+.right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    left: auto;
+    right: 341px;
+    border-left: 1px solid #ddd;
+}
+
+.m-entry-slot {
+    display: block;
+    padding: 1.3rem;
+    border-top: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+.m-entry-slot h3 {
+    font-family: Adelle,Georgia,serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    color: #000;
+}
+
+.m-entry-slot .p-dynamic-image {
+    height: 200px;
+}
+.p-dynamic-image {
+    -webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    /* box-shadow: inset 0 0 50px rgba(0,0,0,0.5); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}

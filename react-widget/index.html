@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+    <script src="node_modules/immutable/dist/immutable.min.js"></script>
     <script src="node_modules/react/dist/react-with-addons.js"></script>
     <script src="node_modules/react/dist/JSXTransformer.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
@@ -10,95 +11,89 @@
   </head>
   <body>
 
-    <div id="myApp" class="positionRel"></div>
+    <!-- <div id="myApp" class="positionRel"></div> -->
 
 
 
-   <!--  <li class="  h-entry tweet  with-expansion  customisable-border" data-tweet-id="565306239614459906" data-rendered-tweet-id="565306239614459906" data-scribe="component:tweet">
-        <div class="header">
-            <a class="u-url permalink customisable-highlight" href="https://twitter.com/russfrith/status/565306239614459906" data-datetime="2015-02-11T00:28:05+0000" data-scribe="element:mini_timestamp">
-                <time pubdate="" class="dt-updated" datetime="2015-02-11T00:28:05+0000" title="Time posted: 11 Feb 2015, 00:28:05 (UTC)" aria-label="Posted on 11 Feb">10 Feb</time>
-            </a>
-            <div class="h-card p-author" data-scribe="component:author">
-                <a class="u-url profile" href="https://twitter.com/russfrith" aria-label="Russell Frith (screen name: russfrith)" data-scribe="element:user_link">
-                    <img class="u-photo avatar" alt="" src="https://pbs.twimg.com/profile_images/463911364738547713/20NRpn7v_normal.jpeg" data-src-2x="https://pbs.twimg.com/profile_images/463911364738547713/20NRpn7v_bigger.jpeg" data-scribe="element:avatar">
-                        <span class="full-name">
-                            <span class="p-name customisable-highlight" data-scribe="element:name">Russell Frith</span>
-                        </span>
-                        <span class="p-nickname" dir="ltr" data-scribe="element:screen_name">@
-                            <b>russfrith</b>
-                        </span>
-                    </a>
+    <div class="main-section">
+        <div class="main-section-column left">
+            <div class="m-entry-slot">
+                <h3>T-Mobile's John Legere blasts FCC over 'disaster' spectrum auction</h3>
+                <a href="javascript:void(0);" data-analytics-link="river:image" sl-processed="1">
+                    <div 
+                        class="p-dynamic-image vox-lazy-load lazy-loaded" 
+                        data-imgkey="45721380:*:5" 
+                        data-original="https://cdn2.vox-cdn.com/thumbor/T8uNCcDviAjRYMS8lkq2l5mPwh0=/0x607:2636x2364/400x268/cdn0.vox-cdn.com/uploads/chorus_image/image/45721380/Edison_and_phonograph.0.0.jpg" 
+                        data-dim="302x200" >
+                      <!--   style="background-image: url(https://cdn2.vox-cdn.com/thumbor/T8uNCcDviAjRYMS8lkq2l5mPwh0=/0x607:2636x2364/400x268/cdn0.vox-cdn.com/uploads/chorus_image/image/45721380/Edison_and_phonograph.0.0.jpg);"> -->
+                    </div>
+                </a>
+                <div class="m-entry-slot__blurb">
+                    <p>A movie about the life of Thomas Edison is reportedly in the works at Paramount, according to <a target="new" href="http://www.thewrap.com/j-j-abrams-bad-robot-developing-thomas-edison-movie-at-paramount-exclusive/" sl-processed="1">The Wrap</a>. Edison is considered one of the most prolific inventors in modern history, having accumulated <a target="new" href="http://edison.rutgers.edu/patents.htm" sl-processed="1">more...</a></p>
                 </div>
+            </div>
+            <div class="m-entry-slot"></div>
         </div>
-        <div class="e-entry-content">
-            <p class="e-entry-title">Creating Iterables In ECMAScript 6 
-                <a href="http://t.co/SMLtvAheEj" rel="nofollow" dir="ltr" data-expanded-url="http://russfr.it/1MaBFj5" class="link customisable" target="_blank" title="http://russfr.it/1MaBFj5" data-scribe="element:url">
-                    <span class="tco-hidden">http://</span>
-                    <span class="tco-display">russfr.it/1MaBFj5</span>
-                    <span class="tco-hidden"></span>
-                    <span class="tco-ellipsis">
-                        <span class="tco-hidden">&nbsp;</span>
-                    </span>
-                </a> via 
-                <a href="https://twitter.com/OdeToCode" class="profile customisable h-card" dir="ltr" data-scribe="element:mention">@
-                    <b class="p-nickname">OdeToCode</b>
-                </a>
-                <a href="https://twitter.com/hashtag/javascript?src=hash" data-query-source="hashtag_click" class="hashtag customisable" dir="ltr" rel="tag" data-scribe="element:hashtag">#
-                    <b>javascript</b>
-                </a>
-                <a href="https://twitter.com/hashtag/es6?src=hash" data-query-source="hashtag_click" class="hashtag customisable" dir="ltr" rel="tag" data-scribe="element:hashtag">#
-                    <b>es6</b>
-                </a>
-            </p>
+
+
+
+        <div class="main-section-column center">
+            <div class="m-entry-slot">
+                <h3>Experimental new HIV treatment may prevent infection</h3>
+                <div class="m-entry-slot__blurb">
+                    <p>Researchers say that they have developed an HIV treatment capable of blocking infection in monkeys for more than 40 weeks after being administered. The results, reported today&nbsp;<a target="_blank" href="http://www.nature.com/articles/nature14264.epdf?referrer_access_token=K4TIgnbIYY1XHhbuuWbMwNRgN0jAjWel9jnR3ZoTv0P-E3fZUuFIj-CUa0bLJcr_Vejh5vv16DCjVTYxwnoYDEUxZ3aZMKmA6zPQ2A3oH9CMWlNwPI1u0t6AqM5_LosM" sl-processed="1">in <i>Nature</i></a>, appear so...</p>
+                </div>
+            </div>
+            <div class="m-entry-slot"></div>
         </div>
-        <div class="footer customisable-border" data-scribe="component:footer">
-            <span class="stats-narrow">
-                <span class="stats" data-scribe="component:stats">
-                    <a href="https://twitter.com/russfrith/status/565306239614459906" title="View Tweet on Twitter" data-scribe="element:retweet_count">
-                        <span class="stats-retweets">
-                            <strong>1</strong> Retweet
-      
-                        </span>
-                    </a>
-                </span>
-            </span>
-            <a class="expand customisable-highlight" href="https://twitter.com/russfrith/status/565306239614459906" data-toggled-text="Collapse" role="button" aria-expanded="false" data-scribe="element:show_details">
-                <b>Expand</b>
-            </a>
-            <ul class="tweet-actions" role="menu" aria-label="Tweet actions" data-scribe="component:actions">
-                <li>
-                    <a href="https://twitter.com/intent/tweet?in_reply_to=565306239614459906" class="reply-action web-intent" title="Reply" data-scribe="element:reply">
-                        <i class="ic-reply ic-mask"></i>
-                        <b>Reply</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/intent/retweet?tweet_id=565306239614459906" class="retweet-action web-intent" title="Retweet" data-scribe="element:retweet">
-                        <i class="ic-retweet ic-mask"></i>
-                        <b>Retweet</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/intent/favorite?tweet_id=565306239614459906" class="favorite-action web-intent" title="Favorite" data-scribe="element:favorite">
-                        <i class="ic-fav ic-mask"></i>
-                        <b>Favorite</b>
-                    </a>
-                </li>
-            </ul>
-            <span class="stats-wide">
-                <b>· </b>
-                <span class="stats" data-scribe="component:stats">
-                    <a href="https://twitter.com/russfrith/status/565306239614459906" title="View Tweet on Twitter" data-scribe="element:retweet_count">
-                        <span class="stats-retweets">
-                            <strong>1</strong> Retweet
-      
-                        </span>
-                    </a>
-                </span>
-            </span>
-        </div>
-    </li> -->
+        <div class="main-section-column right"></div>
+
+    </div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script type="text/jsx" src="js/app.jsx"></script>
