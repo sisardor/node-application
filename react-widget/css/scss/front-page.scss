@@ -1,0 +1,258 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.snippet-n.tiles .cell .hgroup, #tinymce .snippet-n .cell .hgroup, .snippet.tiles .cell .hgroup {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main {
+  border: 1px solid #ddd;
+  border-width: 1px 1px 0 1px;
+  width: 1025px;
+  margin: 0 auto;
+}
+
+.main-section {
+  position: relative;
+  &.section1 {
+    &:before {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+    &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden;
+      clear: both;
+    }
+    .left:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      left: 341px;
+      right: auto;
+      border-left: 1px solid #ddd;
+    }
+    .right:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      left: auto;
+      right: 341px;
+      border-left: 1px solid #ddd;
+    }
+    .left .m-entry-slot:first-child:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -1px;
+      border: 1px solid #919191;
+      border-width: 1px 1px 0 0;
+      display: block;
+      width: 5px;
+      height: 5px;
+      z-index: 10;
+    }
+    .center .m-entry-slot:first-child:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 1px solid #919191;
+      border-width: 1px 1px 0 0;
+      display: block;
+      width: 5px;
+      height: 5px;
+      z-index: 10;
+    }
+    .right .m-entry-slot:first-child:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -1px;
+      border: 1px solid #919191;
+      border-width: 1px 0 0 1px;
+      display: block;
+      width: 5px;
+      height: 5px;
+      z-index: 10;
+    }
+    .center .m-entry-slot {
+      &:first-child:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #919191;
+        border-width: 1px 0 0 1px;
+        display: block;
+        width: 5px;
+        height: 5px;
+        z-index: 10;
+      }
+      &:last-child {
+        &:before {
+          content: "";
+          position: absolute;
+          top: -1px;
+          left: 0;
+          border: 1px solid #919191;
+          border-width: 1px 0 0 1px;
+          display: block;
+          width: 5px;
+          height: 5px;
+          z-index: 10;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: -1px;
+          right: 0;
+          border: 1px solid #919191;
+          border-width: 1px 1px 0 0;
+          display: block;
+          width: 5px;
+          height: 5px;
+          z-index: 10;
+        }
+      }
+      &:first-child > :first-child {
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          border: 1px solid #919191;
+          border-width: 0 0 1px 1px;
+          display: block;
+          width: 5px;
+          height: 5px;
+          z-index: 10;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          right: 0;
+          border: 1px solid #919191;
+          border-width: 0 1px 1px 0;
+          display: block;
+          width: 5px;
+          height: 5px;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+
+/*=============== Grid border ===============*/
+
+.m-entry-slot {
+  &:first-child {
+    border: 0;
+  }
+  display: block;
+  padding: 1.3rem;
+  border-top: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+/*.m-entry-slot::before {
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    border:1px solid #919191;
+    border-width:1px 0 0 1px;
+    display:block;
+    width:5px;
+    height:5px;
+    z-index:10;
+}*/
+/*=============== End Grid border ===============*/
+
+.main-section-column {
+  width: 341px;
+  /*background: antiquewhite;*/
+  float: left;
+  display: block;
+  &.left, &.center, &.right {}
+}
+
+/*.right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    left: auto;
+    right: 341px;
+    border-left: 1px solid #ddd;
+}*/
+
+.m-entry-slot {
+  h3 {
+    font-family: Adelle,Georgia,serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    color: #000;
+  }
+  .p-dynamic-image {
+    height: 200px;
+  }
+}
+
+.p-dynamic-image {
+  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  /* box-shadow: inset 0 0 50px rgba(0,0,0,0.5); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.m-entry-slot__blurb {}
+
+.m-entry-slot__meta {
+  font-size: .75rem;
+  margin: .6rem 0 .75rem;
+  position: relative;
+  padding-right: 15px;
+}
+
+.m-entry-slot__long-date {}
+
+.m-entry-slot__short-date {
+  display: none;
+}
+
+.p-comment-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 10px !important;
+  font-size: 12px;
+  &:after {}
+}
