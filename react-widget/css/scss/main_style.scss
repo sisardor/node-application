@@ -8,6 +8,9 @@ html {
 html {
     font-family: Helvetica,Arial,sans-serif;
 }
+html, body {
+    font-size: 15px;
+}
 
 a {
     color: inherit;
@@ -17,7 +20,11 @@ a {
 h1, h2, h3, p {
     margin: 0px;
 }
+q {
+    quotes: none !important; 
+}
 
 @import 'front-page';
 @import '_grid-sys';
 @import 'single-page';
+@import '_side-bar';
