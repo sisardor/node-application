@@ -1,0 +1,41 @@
+
+
+.p-rock__basic-article-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1rem;
+
+    li {
+        border-bottom: 1px dotted #ddd;
+        padding: 1rem 0;
+        position: relative;
+
+        .p-dynamic-image {
+            float: left;
+            width: 30%;
+            height: 70px;
+        }
+        h3 {
+            font-family: Adelle,Georgia,serif;
+            font-size: 1rem;
+            font-weight: 400;
+            float: left;
+            width: 70%;
+            margin: 0;
+            padding: 0 0 0 1rem;
+            position: relative;
+            top: -2px;
+            line-height: 1.1;
+        }
+    }
+    li:before, li:after {
+        content: ".";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    li:after {
+      clear: both;
+    }
+}
