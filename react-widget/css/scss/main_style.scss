@@ -10,6 +10,8 @@ html {
 }
 html, body {
     font-size: 15px;
+    padding: 0px;
+    margin: 0px;
 }
 
 a {
@@ -25,6 +27,6 @@ q {
 }
 
 @import 'front-page';
-@import '_grid-sys';
+@import '_m-hero';
 @import 'single-page';
 @import '_side-bar';
