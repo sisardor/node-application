@@ -17,7 +17,6 @@
 	padding: 1rem;
 }
 
-/*@media (min-width: 1025px)*/
 
 .m-linkset__entry {
 	padding: 1.25rem 1.5rem;
@@ -214,9 +213,6 @@
 }
 
 
-
-
-
 /* ---------- Sub 1 ----------*/
 /*@media (min-width: 1025px)*/
 
@@ -337,6 +333,10 @@ $slot_bk_opacity: .7;
 		}
 	}
 }
+
+
+
+
 
 .m-linkset__entry:hover .p-dynamic-image:after, .m-hero .m-hero__slot:hover .p-dynamic-image:after, .m-carousel.hero .m-carousel__item:hover .p-dynamic-image:after, .m-video-hero__main-entry:hover .p-dynamic-image:after, .m-longform-index__node:hover .p-dynamic-image:after, .m-rock-recent-reviews__entry:hover .p-dynamic-image:after, .m-rock-popular-features__entry:hover .p-dynamic-image:after, .m-rock-recent-feature:hover .p-dynamic-image:after {
 	opacity: 0.9 !important;
