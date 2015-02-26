@@ -1,0 +1,70 @@
+
+.m-hero.breaker.two {
+
+    .m-hero__slot {
+        white-space: normal;
+        height: 200px;
+
+        &:first-child .p-dynamic-image:after {
+            background-color: #DC4225;
+            background-image: -webkit-linear-gradient(135deg,#DC4225,#292484);
+            background-image: -moz-linear-gradient(135deg,#dc4225,#292484);
+            background-image: -o-linear-gradient(135deg,#dc4225,#292484);
+            background-image: linear-gradient(135deg,#DC4225,#292484);
+            opacity: .7;
+            
+        }
+
+        &:last-child .p-dynamic-image:after {
+            background-color: #D38312;
+            background-image: -webkit-linear-gradient(135deg,#D38312,#002F4B);
+            background-image: -moz-linear-gradient(135deg,#d38312,#002f4b);
+            background-image: -o-linear-gradient(135deg,#d38312,#002f4b);
+            background-image: linear-gradient(135deg,#D38312,#002F4B);
+            opacity: .7;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .m-hero.breaker.two:before, .m-hero.breaker.two:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    }
+
+    .m-hero.breaker.two {
+
+
+        .m-hero__slot {
+            width: 50%;
+            float: left;
+        }
+    }
+}
+@media (min-width: 800px) {
+    .m-hero.breaker.two {
+
+        .m-hero__slot {
+            height: 300px;
+            padding: 1.5rem;
+        }
+    }
+}
+@media (min-width: 1025px) {
+    .m-hero.breaker.two {
+
+        .m-hero__slot {
+            height: 350px;
+
+
+            &:first-child {
+                width: 511px;
+            }
+            &:last-child {
+                width: 512px;
+            }
+        }
+    }
+}
