@@ -1,0 +1,79 @@
+
+.m-carousel.breaker {
+  display: none;
+}
+.m-carousel__control {
+    display: none;
+}
+.m-carousel.hero .m-carousel__control {
+    width: 72px;
+}
+.m-carousel.hero .m-carousel__container {
+    height: 175px;
+}
+.m-carousel__container {
+    position: relative;
+}
+.m-carousel.hero .m-carousel__pane {
+    height: 175px;
+    left: 0;
+    width: 100%;
+}
+.m-carousel.hero .m-carousel__item {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  height: 175px;
+}
+@media (min-width: 600px){
+    .m-carousel.breaker {
+      display: block;
+    }
+}
+@media (min-width: 700px){
+    
+}
+@media (min-width: 800px){
+    .m-carousel.hero .m-carousel__item {
+        width: 40%;
+    }
+}
+@media (min-width: 1025px){
+    .m-carousel.breaker {
+        position: relative;
+        top: -3.2rem;
+        margin-bottom: -3.2rem;
+    }
+
+    .m-carousel__control {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: #f7f1ee;
+        overflow: hidden;
+        text-indent: 100%;
+        cursor: default;
+    }
+
+    .m-carousel__control.-next {
+        right: 0;
+    }
+
+    .m-carousel.hero .m-carousel__pane {
+        left: 72px;
+        width: 86%;
+    }
+    .m-carousel.hero .m-carousel__item {
+        width: 293px;
+    }
+}
+
+.m-linkset__entry .p-dynamic-image, .m-hero .m-hero__slot .p-dynamic-image, .m-carousel.hero .m-carousel__item .p-dynamic-image, .m-video-hero__main-entry .p-dynamic-image, .m-longform-index__node .p-dynamic-image, .m-rock-recent-reviews__entry .p-dynamic-image, .m-rock-popular-features__entry .p-dynamic-image, .m-rock-recent-feature .p-dynamic-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
