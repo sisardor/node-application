@@ -80,28 +80,6 @@ q {
     width: 5px;
     height: 5px;
     z-index: 10; }
-  .main-section.section1 .right .m-entry-slot:first-child:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1px;
-    border: 1px solid #919191;
-    border-width: 1px 0 0 1px;
-    display: block;
-    width: 5px;
-    height: 5px;
-    z-index: 10; }
-  .main-section.section1 .right .m-entry-slot:last-child:before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    border: 1px solid #919191;
-    border-width: 1px 0 0 1px;
-    display: block;
-    width: 5px;
-    height: 5px;
-    z-index: 10; }
   .main-section.section1 .center .m-entry-slot:first-child:before {
     content: "";
     position: absolute;
@@ -157,6 +135,44 @@ q {
     width: 5px;
     height: 5px;
     z-index: 10; }
+  .main-section.section1 .right .m-entry-slot:first-child:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1px;
+    border: 1px solid #919191;
+    border-width: 1px 0 0 1px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section1 .right .m-entry-slot:last-child:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #919191;
+    border-width: 1px 0 0 1px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section1 .right .m-entry-slot:first-child {
+    display: none; }
+  @media (min-width: 1025px) {
+    .main-section.section1 .right .m-entry-slot:first-child {
+      display: block; }
+    .main-section.section1 .right .m-entry-slot:last-child:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      border: 1px solid #919191;
+      border-width: 1px 0 0 1px;
+      display: block;
+      width: 5px;
+      height: 5px;
+      z-index: 10; } }
 
 @media (min-width: 600px) {
   .main-section.section1 .m-entry-section__column {
@@ -175,9 +191,6 @@ q {
   .m-entry-section__column {
     display: block; } }
 .main-section.section1 .center .m-entry-slot:last-child {
-  display: none; }
-
-.main-section.section1 .right .m-entry-slot:first-child {
   display: none; }
 
 @media (min-width: 1025px) {
@@ -207,11 +220,95 @@ q {
     border-left: 1px solid #ddd; } }
 .main-section {
   position: relative; }
-  .main-section.section2:before, .main-section.section2:after {
+  .main-section.section2:before {
     content: ".";
     display: block;
     height: 0;
     overflow: hidden; }
+  .main-section.section2:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both; }
+  .main-section.section2 .left .m-entry-slot:first-child:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1px;
+    border: 1px solid #919191;
+    border-width: 1px 1px 0 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section2 .center .m-entry-slot:first-child:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #919191;
+    border-width: 1px 1px 0 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section2 .center .m-entry-slot:first-child:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #919191;
+    border-width: 1px 0 0 1px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section2 .center .m-entry-slot:last-child:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #919191;
+    border-width: 1px 0 0 1px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section2 .center .m-entry-slot:last-child:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0;
+    border: 1px solid #919191;
+    border-width: 1px 1px 0 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  .main-section.section2 .center .m-entry-slot:first-child > :first-child:before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border: 1px solid #919191;
+    border-width: 0 0 1px 1px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    z-index: 10; }
+  @media (min-width: 1025px) {
+    .main-section.section2 .center .m-entry-slot:first-child > :first-child:after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      border: 1px solid #919191;
+      border-width: 0 1px 1px 0;
+      display: block;
+      width: 5px;
+      height: 5px;
+      z-index: 10; } }
 
 @media (min-width: 600px) {
   .main-section.section2 .m-entry-section__column {
@@ -254,6 +351,71 @@ q {
       left: auto;
       right: 341px;
       border-left: 1px solid #DDD; } }
+.m-carousel.breaker {
+  display: none; }
+
+.m-carousel__control {
+  display: none; }
+
+.m-carousel.hero .m-carousel__control {
+  width: 72px; }
+
+.m-carousel.hero .m-carousel__container {
+  height: 175px; }
+
+.m-carousel__container {
+  position: relative; }
+
+.m-carousel.hero .m-carousel__pane {
+  height: 175px;
+  left: 0;
+  width: 100%; }
+
+.m-carousel.hero .m-carousel__item {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  height: 175px; }
+
+@media (min-width: 600px) {
+  .m-carousel.breaker {
+    display: block; } }
+@media (min-width: 800px) {
+  .m-carousel.hero .m-carousel__item {
+    width: 40%; } }
+@media (min-width: 1025px) {
+  .m-carousel.breaker {
+    position: relative;
+    top: -3.2rem;
+    margin-bottom: -3.2rem; }
+
+  .m-carousel__control {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #f7f1ee;
+    overflow: hidden;
+    text-indent: 100%;
+    cursor: default; }
+
+  .m-carousel__control.-next {
+    right: 0; }
+
+  .m-carousel.hero .m-carousel__pane {
+    left: 72px;
+    width: 86%; }
+
+  .m-carousel.hero .m-carousel__item {
+    width: 293px; } }
+.m-linkset__entry .p-dynamic-image, .m-hero .m-hero__slot .p-dynamic-image, .m-carousel.hero .m-carousel__item .p-dynamic-image, .m-video-hero__main-entry .p-dynamic-image, .m-longform-index__node .p-dynamic-image, .m-rock-recent-reviews__entry .p-dynamic-image, .m-rock-popular-features__entry .p-dynamic-image, .m-rock-recent-feature .p-dynamic-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%; }
+
 /*=============== Grid border ===============*/
 @media (min-width: 600px) {
   .m-entry-slot {
